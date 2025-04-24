@@ -36,7 +36,9 @@ function setup() {
  // }
 }
 
-
+function mouseWheel(){
+  poem.position(random(100,windowWidth-400), random(100,windowHeight-100));
+}
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
