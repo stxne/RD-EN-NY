@@ -186,13 +186,13 @@
     mix-blend-mode: multiply ;
   }
 
-  /*.clickable-en:hover{
+  .clickable-en:hover{
     color: rgb(127, 255, 148);
     mix-blend-mode: multiply ;
-  }*/
+  }
 
   .clickable-ny:hover{
-    color: rgb(127, 255, 148);/*#fffb00;
+    color: #fffb00;
     /*color: rgb(0, 42, 255);*/
     mix-blend-mode: multiply ;
   }
