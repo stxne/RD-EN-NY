@@ -1,5 +1,4 @@
 let images = [];
-let imageIndex = 0;
 
 function preload() {
   // Load your images here in the desired order.
@@ -17,15 +16,13 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  
+  createCanvas(windowWidth, windowHeight); 
 }
 
 function draw() {
 
   for (let i = 0; i < images.length; i ++) {
-    let currentImage = images[i]; // Use modulo to loop
-    image(currentImage, random(100,windowWidth),random(100,windowHeight), 200,275);
+    image(images[i], random(100,windowWidth),random(100,windowHeight), 200,275);
   }
   
 }
