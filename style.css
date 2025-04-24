@@ -267,6 +267,36 @@
     z-index:0;
   }
 
+  .en-landing {
+    /*position: fixed;*/
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    /*text position*/
+
+    /*display: block;  /* defines flexbox */
+    /*align-items: center;*/
+    display: flex;                   /* defines flexbox */
+    flex-direction: column;          /* top to bottom */
+    /* justify-content: space-between;  first item at start, last at end */
+
+    /*type settings*/
+    font-family: 'Univers Light';
+    font-weight: 400;
+    text-align: center;
+    font-size: 30em;
+    line-height: 85%;
+    letter-spacing: -10px;
+    padding-top: .2em;
+    
+  
+
+    user-select: none;
+    z-index:0;
+  }
+
+
   /*sketch.js canvas*/
   canvas {
     position: fixed; 
