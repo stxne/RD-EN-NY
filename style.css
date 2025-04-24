@@ -270,7 +270,8 @@
   .en-landing {
     width: 100%;
     height: 100%;
-    padding: 0;
+    flex-direction: column;          /* top to bottom */
+    justify-content: space-between; 
 
     /*text position*/
 
@@ -285,9 +286,9 @@
     font-weight: 400;
     text-align: center;
     font-size: 25em;
-    line-height: 75%;
-    letter-spacing: -25px;
-    padding-top: .5em;
+    line-height: 80%;
+    letter-spacing: -15px;
+    
     
 
     user-select: none;

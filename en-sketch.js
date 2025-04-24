@@ -1,63 +1,36 @@
-let poem = [
-  "The Heights, a microcosm of the American Dream",
-  "The nucleus of Dominicanidad in New York",
-  "We find home in these tiendas ",
-  "owned by our mothers and ties.",
-  "We seek solace in frio frios and pastelitos.",
-  "This land is our flesh and bone,",
-  "our home away from home on Broadway ",
-  "and it shows…,",
-  "WASHINGTON HEIGHTS ",
-  "BY DILSON HERNANDEZ"
-];
+let images = [];
+let imageIndex = 0;
 
-let poemX = [];
-let poemY = [];
-let offsets = [];
-let scrollPosition = 0;
-let lineHeight = 30;
-let stanzaGap = 60;
-let stanzaLengths = [1, 1, 1, 1, 1];
-let horizontalSpeed = 1; // Adjust for the speed of horizontal movement
+function preload() {
+  // Load your images here in the desired order.
+  images[0] = loadImage('images/img20250210_02062555.jpg');
+  images[1] = loadImage('images/img20250210_02293431.jpg');
+  images[2] = loadImage('images/img20250210_02425114.jpg');
+  images[3] = loadImage('images/img20250210_02574906.jpg');
+  images[4] = loadImage('images/img20250210_03182411.jpg');
+  images[5] = loadImage('images/img20250210_03233986.jpg');
+  images[6] = loadImage('images/img20250210_03375013.jpg');
+  images[7] = loadImage('images/img20250210_03461873.jpg');
+  
+  
+  // Add more loadImage calls in the order you want them to appear
+}
 
 function setup() {
-  noCanvas();
-  textFont('monospace');
-  textSize(20);
-  textAlign(CENTER,CENTER);
-
-  let currentY = lineHeight;
-  for (let i = 0; i < poem.length; i++) {
-    poemX[i] = -width; // Start off-screen to the left
-    poemY[i] = currentY;
-    offsets[i] = random(40, 120) * i; // Horizontal stagger
-    currentY += lineHeight;
-    if ((i + 1) % stanzaLengths.reduce((sum, val) => sum + val, 0) === 0 && i < poem.length - 1) {
-      currentY += stanzaGap;
-    }
-  }
+  createCanvas(windowWidth, windowHeight);
+  imageMode(CENTER);
 }
 
 function draw() {
-  background(240);
-
-  for (let i = 0; i < poem.length; i++) {
-    let targetX = 50 + offsets[i] + scrollPosition * horizontalSpeed; // Move based on scroll
-    poemX[i] = lerp(poemX[i], targetX, 0.05);
-    text(poem[i], poemX[i], poemY[i] - scrollPosition * 0.2); // Optional slight vertical movement
+  if (images.length > 0) {
+    let currentImage = images[imageIndex % images.length]; // Use modulo to loop
+    image(currentImage, random(100,windowWidth),random(100,windowHeight));
+    imageIndex++; // Move to the next image for the next click
   }
 }
 
-function mouseWheel(event) {
-  scrollPosition += event.deltaY * 0.1; // Adjust sensitivity of scroll to movement
-  // Optionally clamp the scrollPosition to prevent infinite scrolling
-  // scrollPosition = constrain(scrollPosition, 0, someMaxValue);
-}
+
 
 function windowResized() {
-  resizeCanvas(windowWidth * 2, poem.length * lineHeight + (stanzaLengths.length - 1) * stanzaGap);
-  for (let i = 0; i < poem.length; i++) {
-    poemX[i] = -width; // Reset x position on resize
-  }
-  scrollPosition = 0; // Reset scroll position on resize
+  resizeCanvas(windowWidth, windowHeight);
 }
