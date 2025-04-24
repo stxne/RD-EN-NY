@@ -80,7 +80,7 @@ function mouseClicked() {
   
   if (images.length > 0 && clicks%2==0) {
     let currentImage = images[imageIndex % images.length]; // Use modulo to loop
-    image(currentImage, mouseX, mouseY,200,149);
+    image(currentImage, mouseX, mouseY);
     imageIndex++; // Move to the next image for the next click
     clicks++;
   }
