@@ -5,7 +5,7 @@ let poem = "The Heights, a microcosm of the American Dream\nThe nucleus of Domin
 
 function preload() {
   // Load your images here in the desired order.
-  font = loadFont('FONTS/guida-mono-sharp-regular-pro.woff2');
+  //font = loadFont('FONTS/guida-mono-sharp-regular-pro.woff2');
   images[0] = loadImage('images/img20250210_02062555.jpg');
   images[1] = loadImage('images/img20250210_02293431.png');
   images[2] = loadImage('images/img20250210_02425114.png');
@@ -22,7 +22,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight); 
 
-  textFont(font);
+  textFont('monospace');
   textSize(20);
   fill(30,255,100);
   image(images[0],windowWidth/2, windowHeight/2,400,551);
