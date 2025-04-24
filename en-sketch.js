@@ -28,7 +28,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight); 
   for (let i = 0; i < images.length; i ++) {
-    image(images[i], random(100,windowWidth),random(100,windowHeight), 200,275);
+    image(images[i], random(0,windowWidth),random(100,windowHeight), 200,275);
   }
 }
 
