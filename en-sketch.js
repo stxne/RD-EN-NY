@@ -26,7 +26,14 @@ function setup() {
   
 }
 
-
+function mouseClicked() {
+  
+  
+    
+  text(poem, mouseX, mouseY);
+    
+  
+}
 
 //function windowResized() {
 //  resizeCanvas(windowWidth, windowHeight);
