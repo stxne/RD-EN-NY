@@ -23,16 +23,7 @@ clickableLetters.forEach(letter => {
 
 
 
-const poemLines = document.querySelector('.poem-lines');
-const animationDuration = 30; // Must match CSS animation duration
-const scrollFactor = 0.5; // Adjust sensitivity of scroll to animation speed
 
-window.addEventListener('scroll', () => {
-    const scrollPercentage = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
-    const animationPlayTime = scrollPercentage * animationDuration;
-    poemLines.style.animationPlayState = 'running';
-    poemLines.style.animationDelay = `-${animationPlayTime}s`;
-});
 
 
 
