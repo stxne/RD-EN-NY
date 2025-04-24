@@ -25,11 +25,6 @@ function setup() {
   textSize(15);
   textAlign(CENTER, CENTER);
   
-  fill(0);
-  bbox = font.textBounds(poem, mouseX, MouseY);
-  rect(bbox.x, bbox.y, bbox.w, bbox.h);
-  
-  fill(255);
   text(poem, mouseX, mouseY);
 
   //for (let i = 0; i < images.length; i ++) {
@@ -39,8 +34,8 @@ function setup() {
 
 function draw() {
   
-  for(i=200; i<=width; i+=200){
-    for(j=275;j<=height;j+=275){
+  for(i=200; i<=widthWidth; i+=200){
+    for(j=275;j<=windowHeight;j+=275){
     // blend modes in P5 are pretty cool 
     blendMode(MULTIPLY);
     // calling a random image from my image array 
@@ -52,10 +47,6 @@ function draw() {
 
   
   
-}
-
-
-
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
