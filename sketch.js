@@ -26,7 +26,6 @@ function draw() {
 function mouseDragged() {
   if (images.length > 0) {
     let currentImage = images[imageIndex % images.length]; // Use modulo to loop
-    currentImage.resize(100,75)
     image(currentImage, mouseX, mouseY);
     imageIndex++; // Move to the next image for the next click
   }
