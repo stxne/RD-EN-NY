@@ -1,10 +1,11 @@
+
 let images = [];
 let poem = "The Heights, a microcosm of the American Dream\nThe nucleus of Dominicanidad in New York\nWe find home in these tiendas\nWe seek solace in frio frios and pastelitos.\nThis land is our flesh and bone\nour home away from home on Broadway and it shows…\n- WASHINGTON HEIGHTS BY DILSON HERNANDEZ";
 
 
 function preload() {
   // Load your images here in the desired order.
-  font = loadFont('FONTS/guida-mono-sharp-regular-pro.woff2');
+  //font = loadFont('FONTS/guida-mono-sharp-regular-pro.woff2');
   images[0] = loadImage('images/img20250210_02062555.jpg');
   images[1] = loadImage('images/img20250210_02293431.png');
   images[2] = loadImage('images/img20250210_02425114.png');
@@ -27,6 +28,6 @@ function setup() {
 
 
 
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
+//function windowResized() {
+//  resizeCanvas(windowWidth, windowHeight);
+//}
