@@ -1,4 +1,14 @@
 let images = [];
+let poem =[
+  "The Heights, a microcosm of the American Dream",
+  "The nucleus of Dominicanidad in New York",
+  "We find home in these tiendas", 
+  "We seek solace in frio frios and pastelitos.",
+  "This land is our flesh and bone",
+  "our home away from home on Broadway and it shows…", 
+  "- WASHINGTON HEIGHTS BY DILSON HERNANDEZ"
+
+];
 
 function preload() {
   // Load your images here in the desired order.

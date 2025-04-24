@@ -1,5 +1,13 @@
 let images = [];
 let imageIndex = 0;
+let songIndex = 0;
+let clicks = 0;
+let merengue = [
+  "Compadre Pedro Juan baile el jaleo \ncompadre Pedro Juan que esta \n sabroso aquella niña de los \n ojos negrosque tiene el cuerpo",
+  "flexible baila en la empaliza Compadre\nPedro Juan no pierda el tiempo\ncompadre Pedro Juan saque\nsu dama se acabara ",
+  "el merengue y si no anda con\ncuidao se quedará como un perico\natrapado Baile, Compadre Juan. Baile,\nBaile el merengue. Baile, ",
+  "De medio Lao. Baile, Apambichao.\nBaile, Saque su dama. Baile,\nNo pierda el tiempo. Baile, Amo\nde un Lao Baile. Baile el "
+];
 
 function preload() {
   // Load your images here in the desired order.
@@ -60,6 +68,8 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   imageMode(CENTER);
+  textSize(15);
+  fill(251,255,0);
 }
 
 function draw() {
@@ -67,10 +77,19 @@ function draw() {
 }
 
 function mouseClicked() {
-  if (images.length > 0) {
+  
+  if (images.length > 0 && clicks%2==0) {
     let currentImage = images[imageIndex % images.length]; // Use modulo to loop
-    image(currentImage, mouseX, mouseY);
+    image(currentImage, mouseX, mouseY,200,275);
     imageIndex++; // Move to the next image for the next click
+    clicks++;
+  }
+  else{
+    let currentText = merengue[songIndex % merengue.length]; // Use modulo to loop
+    text(currentText, mouseX, mouseY);
+    songIndex++; // Move to the next image for the next click
+    clicks++;
+
   }
 }
 
