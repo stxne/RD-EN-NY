@@ -32,15 +32,23 @@ function setup() {
   fill(255);
   text(poem, mouseX, mouseY);
 
-  for (let i = 0; i < images.length; i ++) {
-     image(images[i], random(10,x-10),random(10,y-10), 200,275);
-     
-  }
+  //for (let i = 0; i < images.length; i ++) {
+  //   image(images[i], random(10,x-10),random(10,y-10), 200,275);  
+ // }
 }
 
 function draw() {
   
-  
+  for(i=200; i<=width; i+=200){
+    for(j=275;j<=height;j+=275){
+    // blend modes in P5 are pretty cool 
+    blendMode(MULTIPLY);
+    // calling a random image from my image array 
+    image(random(images), i,j, 200,275);
+    }
+  }
+  noLoop();
+}
 
   
   
