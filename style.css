@@ -273,7 +273,6 @@
     top: 0;
     left: 0;
     z-index: 10; /* Or any value higher than your other elements */
-    pointer-events: none; /* Allows clicks to pass through if needed */
   }
 
   
