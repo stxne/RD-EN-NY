@@ -18,7 +18,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  if (images.length > 0) {
+  while(images.length > 0) {
     let currentImage = images[imageIndex]; // Use modulo to loop
     image(currentImage, random(100,windowWidth),random(100,windowHeight), 200,275);
     imageIndex++; // Move to the next image for the next click
