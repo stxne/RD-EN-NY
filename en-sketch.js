@@ -25,7 +25,7 @@ function setup() {
   textSize(15);
   textAlign(CENTER, CENTER);
   
-  text(poem, mouseX, mouseY);
+  
 
   //for (let i = 0; i < images.length; i ++) {
   //   image(images[i], random(10,x-10),random(10,y-10), 200,275);  
@@ -33,6 +33,8 @@ function setup() {
 }
 
 function draw() {
+
+  text(poem, mouseX, mouseY);
   
   for(i=200; i<=widthWidth; i+=200){
     for(j=275;j<=windowHeight;j+=275){
