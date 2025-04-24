@@ -1,0 +1,272 @@
+@font-face {
+    font-family: 'Guida'; 
+    src: url('FONTS/guida-sharp-regular-pro.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Guida'; 
+    src: url('FONTS/guida-sharp-bold-pro.woff2') format('woff2');
+    font-weight: bold; 
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Guida Mono Sharp'; /* Distinct name for the mono font */
+    src: url('FONTS/guida-mono-sharp-light-pro.woff2') format('woff2');
+    font-weight: 300; /* Or could be 300 for light */
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Guida Mono Sharp'; 
+    src: url('FONTS/guida-mono-sharp-regular-pro.woff2') format('woff2'),;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Univers Thin'; 
+    src: url('FONTS/UniversLTStd-ThinUltraCn.otf') format('opentype'); 
+    font-weight: 300; 
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Univers Light'; 
+    src: url('FONTS/UniversLTStd-LightUltraCn.otf') format('opentype'); 
+    font-weight: 400; 
+    font-style: normal;
+  }
+
+  body, html{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(253, 253, 248);
+  }
+
+  /* index.html start*/
+  .landing-screen {
+    display: flex;
+    text-align: center;
+    background-image: url("IMG/144 DPI/img20250210_01562500.jpg");
+    height: 100vmin;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    /*overflow: hidden;*/
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    
+  }
+
+  .landing-text {
+    display: block ;
+    text-align: center;
+    line-height: 3vmin;
+    padding-top: 80vmin;
+  }
+
+  .landing-text h1 {
+    white-space: nowrap;
+    font-family: 'Univers Thin';
+    font-weight: 300;
+    font-size: 50rem; 
+    color: #FFFD7E;
+    margin: 0;
+
+    
+    
+  }
+
+  .landing-text p {
+    font-family: 'Guida Mono Sharp';
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 110%;
+    padding-bottom: 11.5em;
+    padding-top: 11em;
+    padding-right: 20em;
+    padding-left: 20em;
+  }
+
+  
+
+  .text-container{
+    /*overflow: scroll;*/
+    display: flex;
+    max-height: 80%;
+    overflow: hidden;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20em;
+    padding-right: 20em;
+    background-color: rgb(255, 255, 248);
+    user-select: none;
+  }
+
+  .essay-column{
+    width: 50vw;
+    /*height: 100vh;  Adjust height as needed */
+    padding-right:2%;
+  }
+
+  .essay-title{
+    writing-mode: vertical-rl;
+    font-family: 'Guida Mono Sharp';
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 90%;
+    color: beige;
+    background-color: black;
+    
+  }
+
+  
+
+  .essay-left{
+    font-family: 'Guida Mono Sharp';
+    font-weight: 300;
+    /*overflow-y: hidden;*/
+    
+  }
+
+  
+
+  .scrolling-text {
+    
+    overflow: hidden;
+    display: inline-block;
+    animation: scrollText 60s linear infinite;
+    /*transform: translateY(0);*/
+  } 
+  
+  @keyframes scrollText {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0%, -50%);
+    }
+}
+
+  .essay-right {
+    font-family: 'Guida';
+    font-weight: normal;
+    /*overflow: scroll;  Important for the scrolling effect and containing rotated content */
+    /* Styles specific to the right column (upside-down text) */
+    align-self: baseline; /*Center text vertically */
+    /* justify-content: center; Center text horizontally */
+    cursor: pointer; /* Indicate it's clickable */
+  }
+  
+  .subhead {
+    font-family: 'Guida';
+    font-weight: bold;
+    text-indent: 10%;
+    text-transform: uppercase;
+  }
+
+  .upside-down-text {
+    transform: rotate(180deg);
+  }
+
+
+  /*Landing nav + hover state*/
+  .clickable-letter{
+    cursor: pointer;
+  }
+
+  .clickable-rd:hover{
+    color: rgb(255, 127, 127);
+    mix-blend-mode: multiply ;
+  }
+
+  .clickable-en:hover{
+    color: rgb(127, 255, 148);
+    mix-blend-mode: multiply ;
+  }
+
+  .clickable-ny:hover{
+    color: #fffb00;
+    /*color: rgb(0, 42, 255);*/
+    mix-blend-mode: multiply ;
+  }
+
+  .essay-right:hover{
+    color: #001eff;
+  
+  }
+
+  
+  /* Styles for when the container is rotated */
+  .text-container.rotated {
+    transform: rotate(180deg);
+  }
+  
+  .text-container.rotated .essay-left {
+   /* transform: rotateY(180deg);  Flip the left column back to be readable */
+    animation: none; /*Stop the scrolling animation */
+    /*overflow-y: auto;  Enable scrolling if the content overflows */
+    
+  }
+  
+  .text-container.rotated .essay-right {
+    transform: rotate(180deg); /* Flip the right column back to be readable */
+    /*align-self: flex-end;*/
+    align-self: stretch;
+  }
+
+  .text-container.rotated .essay-right:hover {
+    cursor: initial;
+    color: black;
+  }
+
+  .text-container.rotated .essay-left:hover {
+    cursor: pointer;
+    color: #ff0044;
+  }
+ /* index.html start*/
+
+ /* rd.html start */
+ .rd-landing {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    /*text position*/
+
+    /*display: block;  /* defines flexbox */
+    /*align-items: center;*/
+    display: flex;                   /* defines flexbox */
+    flex-direction: column;          /* top to bottom */
+    justify-content: space-between;  /* first item at start, last at end */
+
+    /*type settings*/
+    font-family: 'Univers Light';
+    font-weight: 400;
+    text-align: center;
+    font-size: 30em;
+    line-height: 85%;
+    letter-spacing: -10px;
+    padding-top: .2em;
+    
+    /*background img*/
+    background-image: url('IMG/144\ DPI/img20250210_02202449_rd.jpg');
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+    user-select: none;
+  }
+
+  
+
+
+ 
