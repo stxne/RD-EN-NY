@@ -24,15 +24,6 @@ function setup() {
   textFont(font);
   textSize(15);
   textAlign(CENTER, CENTER);
-  
-  
-
-  //for (let i = 0; i < images.length; i ++) {
-  //   image(images[i], random(10,x-10),random(10,y-10), 200,275);  
- // }
-}
-
-function draw() {
 
   text(poem, mouseX, mouseY);
   
@@ -44,8 +35,13 @@ function draw() {
     image(random(images), i,j, 200,275);
     }
   }
-  noLoop();
+  
+  //for (let i = 0; i < images.length; i ++) {
+  //   image(images[i], random(10,x-10),random(10,y-10), 200,275);  
+ // }
 }
+
+
 
   
   
