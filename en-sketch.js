@@ -25,19 +25,18 @@ function setup() {
   textFont(font);
   textSize(20);
   fill(30,255,100);
-  image(images[0],windowWidth/2, windowHeight/2,200,275);
-  image(images[1],15, 15,200,275);
-  image(images[2],windowWidth-15, windowHeight-15,200,275);
+  image(images[0],windowWidth/2, windowHeight/2,400,551);
+  image(images[1],15, 15,400,551);
+  image(images[2],windowWidth-15, windowHeight-15,400,551);
   
 }
 
 function mouseClicked() {
   
   
-    
-    text(poem, mouseX, mouseY);
-    songIndex++; // Move to the next image for the next click
-    clicks++;
+  rotate(90)
+  text(poem, mouseX, mouseY);
+
 
   
 }
