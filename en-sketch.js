@@ -6,9 +6,9 @@ function preload() {
   // Load your images here in the desired order.
   font = loadFont('FONTS/guida-mono-sharp-regular-pro.woff2');
   images[0] = loadImage('images/img20250210_02062555.jpg');
-  images[1] = loadImage('images/img20250210_02293431.jpg');
-  images[2] = loadImage('images/img20250210_02425114.jpg');
-  images[3] = loadImage('images/img20250210_02574906.jpg');
+  images[1] = loadImage('images/img20250210_02293431.png');
+  images[2] = loadImage('images/img20250210_02425114.png');
+  images[3] = loadImage('images/img20250210_02574906.png');
   images[4] = loadImage('images/img20250210_03182411.jpg');
   images[5] = loadImage('images/img20250210_03233986.jpg');
   images[6] = loadImage('images/img20250210_03375013.jpg');
